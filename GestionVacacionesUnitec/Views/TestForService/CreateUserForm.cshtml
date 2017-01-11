@@ -1,0 +1,134 @@
+﻿@model GestionVacacionesUnitec.ServiceReference1.tbl_usuarios
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Gestion de Vacaciones UNITEC</title>
+    <link href="~/Content/stylesmenu.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="Content/stylesmenu.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+</head>
+<body>
+    <div id="main">
+        <header>
+            <div id="logo">
+                <div id="logo_text">
+                    <img src="~/Content/images/logounitecpeque.jpg" />
+                  
+                </div>
+
+            </div>
+            <nav>
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href='index.html'><span>Inicio</span></a></li>
+                        <li><a href='#'><span>Solicitudes</span></a></li>
+                        <li class='active has-sub'>
+                            <a href='#'><span>Calendario</span></a>
+                        </li>
+                        <li><a href='~/Views/TestForService/CreateUserForm.cshtml'><span>Crear Usuario</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    </div>
+    <div id="site_content">
+        <div id="sidebar_container">
+            <div class="gallery">
+                <ul class="images">
+
+                    <table style="width:330px" border="1">
+                        <tr>
+                            <td>
+
+                            
+                            <center><img src="~/Content/images/profile.png" width="90px" height="125px"></center></td>
+                        </tr>
+                        <tr>
+                            <td><center><a href="#"> Napky| Solicitud</a></center></td>
+                        </tr>
+                        <tr>
+                            <td><center><a href="#">Jesus Murillo| Solicitud</a></center></td>
+
+                        </tr>
+                        <tr>
+                            <td><center><a href="#">Sully Mancia| Solicitud</a></center></td>
+                        </tr>
+                        <tr>
+                            <td><center><a href="#">Josue Enamorado| Solicitud</a></center></td>
+                        </tr>
+                        <tr>
+                            <td><center><a href="#">Daniel Zelaya| Solicitud</a></center></td>
+                        </tr>
+                        <tr>
+                            <td><center><a href="#">Alejandro Ferrera| Solicitud</a></center></td>
+                        </tr>
+
+                    </table>
+
+
+                </ul>
+            </div>
+        </div>
+        <div id="site_creacion">
+            <h2>Crear Usuario</h2>
+            <form>
+                <h4>Ingrese talento humano <input placeholder='talento_humano' type='talento_humano' id="talentoHumano"></h4></br></br>
+                <h4>Ingrese Email <input placeholder='email' type='email' id="email"></h4></br></br>
+                <h4>Ingrese Password <input placeholder='password' type='password' id="password"></h4></br></br>
+                <h4>Ingrese Primer nombre <input placeholder='primer_nombre' type='primer_nombre' id="firstName"></h4></br></br>
+                <h4>Ingrese Segundo nombre <input placeholder='segundo_nombre' type='segundo_nombre' id="middleName"></h4></br></br>
+                <h4>Ingrese Primer apellido  <input placeholder='primer_apellido' type='primer_apellido' id="lastName"></h4></br></br>
+                <h4>Ingrese Segundo nombre <input placeholder='segundo_apellido' type='segundo_apellido' id="secondLastName"></h4></br></br>
+                <h4>Fecha de ingreso <input placeholder='fecha_ingreso' type='fecha_ingreso' id="employmentDate"></h4></br></br>
+                <h4>Fecha de Creacion  <input placeholder='fecha_creacion' type='fecha_creacion' id="signUpDate"></h4></br></br>
+                <h4>Activo / Inactivo  <input type="checkbox" value='activo' id="active"></br></br>
+
+            </form>
+            ______________________________________________________________________________________________________________________________________
+
+            <h2>Departamento al que pertenece</h2>
+            <form action="">
+                <h4>Departamento de IT   <input type="checkbox" name="it" value="it" />   Talento Humano   <input type="checkbox" name="th" value="th"></h4>
+            </form>
+
+            ______________________________________________________________________________________________________________________________________
+            <form action="">
+                <h2>Roles</h2>
+                <h4>Administrativo <input type="checkbox" name="admi" value="admi" />  Tecnico <input type="checkbox" name="tec" value="tec" /></h4>
+                <h4>Catedratico <input type="checkbox" name="cat" value="admi" />  Motorista <input type="checkbox" name="mot" value="mot" /></h4>
+            </form>
+            <button class='animated pulse' id="submitUser">Crear</button>
+        </div>
+        <footer><img src="~/Content/images/footer.jpg" /></footer>
+       
+        <script src="Form.js"></script>
+        <!-- javascript en la parte de abajo para que cargue mas rapido -->
+        <script type="text/javascript" src="~/Content/js/jquery.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.easing-sooper.js"></script>
+        <script type="text/javascript" src="~/Content/js/jquery.sooperfish.js"></script>
+        <script type="text/javascript" src="~/Content/js/image_fade.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('ul.sf-menu').sooperfish();
+            });
+        </script>
+        <script src="~/Scripts/CreateUserForm.js"></script>
+
+</body>
+</html>

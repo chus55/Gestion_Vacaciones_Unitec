@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gestion de Vacaciones UNITEC</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/stylesmenu.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+
+    <script src="script.js"></script>
+
+    <script type="text/javascript" src="~/Content/js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <div id="logo">
+                <div id="logo_text">
+
+                    <img src="~/Content/images/logounitecpeque.jpg">
+                </div>
+
+            </div>
+            <nav>
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href='http://localhost:1755/Home/Index'><span>Inicio</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div id="site_creacion">
+        <h2>&emsp;&emsp;Solicitud de Vacaciones</h2>
+        <h4>&emsp;&emsp;San Pedro Sula "FECHA DE HOY"</h4>
+
+        <h4>&emsp;&emsp;Estimado "JEFE DE AREA"</h4>
+
+        <h4>&emsp;&emsp;Por medio de la presente le solicito se me concedan mis vacaciones correspondientes al "RECIBE EL AÑO"</h4>
+         <h4>&emsp;&emsp;año de laborar en UNITEC, desempeñ&aacute;ndome en el puesto de "PUESTO DEL EMPLEADO".</h4><br />
+        <h4>&emsp;&emsp; Dichas vacaciones ser&aacute;n a partir del "FECHA DE RETIRO"</h4><br />
+        <h4>&emsp;&emsp;Agradeciendo de antemano su atenci&oacute;n a la presente.</h4><br />
+
+        <h4>&emsp;&emsp; Atentamente,</h4><br />
+
+        <h4>&emsp;&emsp;______________________________ &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;_______________________________</h4></h4>
+        <h4>&emsp; &emsp; Solicitado por (Nombre) &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Firma </h4><br />
+
+        <h4>&emsp;&emsp;Observaciones: ________________________________________________________________________</h4>
+        <h4>&emsp;&emsp;_____________________________________________________________________________________</h4>
+        <h4>&emsp;&emsp;_____________________________________________________________________________________</h4>
+        <h4>&emsp;&emsp;_____________________________________________________________________________________</h4><br />
+
+
+        <h4>&emsp;&emsp;D&iacute;as correspondientes: &emsp; 1 año: <input placeholder='1año' type='1year' size="2px"> &emsp; 2 año: <input placeholder='2año' type='2year' size="2px"> &emsp; __año: <input placeholder='__año' type='3year' size="2px"> &emsp; __año: <input placeholder='__año' type='4year' size="2px"> </h4> <br />
+        <h4>&emsp;&emsp;D&iacute;as Solicitados: <input placeholder='Dias Solicitados' type="date" size="15"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Fecha de Salida: <input placeholder='dd/mm/aaaa' type="date" size="15"></h4> <br />
+        <h4>&emsp;&emsp;D&iacute;as tomados anteriormente: <input placeholder='Dias tomados' type="diastomados" size="15"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Fecha de Regreso: <input placeholder='dd/mm/aaaa' type="date" size="15"></h4><br />
+        <h4>&emsp;&emsp;D&iacute;as pendientes a tomar: <input placeholder='Dias tomados' type="diastomados" size="15"> </h4><br />
+        <h4>&emsp;&emsp;Fecha de ingreso a la instituci&oacute;n: <input placeholder='dd/mm/aaaa' type="date" size="15"> &emsp; &emsp; &emsp; &emsp;  Fecha de aprobaci&oacute;n: <input placeholder='dd/mm/aaaa' type="date" size="15"></h4>
+        <h4>&emsp;&emsp;______________________________________ &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;_______________________________</h4></h4>
+        <h4>&emsp;&emsp;Aprobado por Jefe inmediato (Nombre y firma)  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Revisado por talento humano</h4><br />
+    
+        <p><button class='animated-pulse' id="enviarsolicitud" style="width: 100%">Enviar Solicitud</button></p>
+    </div>
+    <div id="MyFooter">
+        <center><img src="~/Content/images/bg_footerlogos.png" /></center>
+
+    </div>
+    
+    
+    <p>&nbsp;</p>
+    <!-- javascript en la parte de abajo para que cargue mas rapido -->
+    <script type="text/javascript" src="~/Content/js/jquery.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.easing-sooper.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.sooperfish.js"></script>
+    <script type="text/javascript" src="~/Content/js/image_fade.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="~/Scripts/CreateUserForm.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('ul.sf-menu').sooperfish();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary_sjb" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogInUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogInUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogInUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogIn2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogIn2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarDepartamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarDepartamento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarDepartamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarDepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarRol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Rol_Permiso_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_Permiso" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Rol_Permiso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rol_PermisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Usuario_Departamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Departamento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Usuario_Departamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_DepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Usuario_Rol_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Rol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Usuario_Rol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_RolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogInUsuario2_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogInUsuario2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogInUsuario2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInUsuario2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeDepartamentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeDepartamentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeDepartamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeRoles" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeRolesPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeRolesPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeRolesPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeRolesPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarVacaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarVacaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarVacaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarVacacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarJerarquia_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregarJerarquia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregarJerarquia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarJerarquiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeJefesPosibles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeJefesPosibles" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaDeJefesPosibles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaDeJefesPosiblesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarUsuario" message="tns:IService1_agregarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarUsuarioResponse" message="tns:IService1_agregarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogInUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogInUsuario" message="tns:IService1_LogInUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogInUsuarioResponse" message="tns:IService1_LogInUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIn2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogIn2" message="tns:IService1_LogIn2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogIn2Response" message="tns:IService1_LogIn2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarDepartamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarDepartamento" message="tns:IService1_agregarDepartamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarDepartamentoResponse" message="tns:IService1_agregarDepartamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarRol" message="tns:IService1_agregarRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarRolResponse" message="tns:IService1_agregarRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rol_Permiso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Rol_Permiso" message="tns:IService1_Rol_Permiso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Rol_PermisoResponse" message="tns:IService1_Rol_Permiso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Departamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Usuario_Departamento" message="tns:IService1_Usuario_Departamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Usuario_DepartamentoResponse" message="tns:IService1_Usuario_Departamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Rol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Usuario_Rol" message="tns:IService1_Usuario_Rol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Usuario_RolResponse" message="tns:IService1_Usuario_Rol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogInUsuario2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogInUsuario2" message="tns:IService1_LogInUsuario2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogInUsuario2Response" message="tns:IService1_LogInUsuario2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeDepartamentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListaDeDepartamentos" message="tns:IService1_ListaDeDepartamentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListaDeDepartamentosResponse" message="tns:IService1_ListaDeDepartamentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListaDeRoles" message="tns:IService1_ListaDeRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListaDeRolesResponse" message="tns:IService1_ListaDeRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeRolesPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListaDeRolesPorUsuario" message="tns:IService1_ListaDeRolesPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListaDeRolesPorUsuarioResponse" message="tns:IService1_ListaDeRolesPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarVacaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarVacaciones" message="tns:IService1_agregarVacaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarVacacionesResponse" message="tns:IService1_agregarVacaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregarJerarquia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregarJerarquia" message="tns:IService1_agregarJerarquia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarJerarquiaResponse" message="tns:IService1_agregarJerarquia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeJefesPosibles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListaDeJefesPosibles" message="tns:IService1_ListaDeJefesPosibles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListaDeJefesPosiblesResponse" message="tns:IService1_ListaDeJefesPosibles_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogInUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogInUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIn2">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogIn2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarDepartamento">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarDepartamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarRol">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rol_Permiso">
+      <soap:operation soapAction="http://tempuri.org/IService1/Rol_Permiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Departamento">
+      <soap:operation soapAction="http://tempuri.org/IService1/Usuario_Departamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Rol">
+      <soap:operation soapAction="http://tempuri.org/IService1/Usuario_Rol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogInUsuario2">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogInUsuario2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeDepartamentos">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListaDeDepartamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeRoles">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListaDeRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeRolesPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListaDeRolesPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarVacaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarVacaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregarJerarquia">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregarJerarquia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDeJefesPosibles">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListaDeJefesPosibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary_sjb/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

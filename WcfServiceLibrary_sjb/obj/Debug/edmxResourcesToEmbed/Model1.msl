@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="vsystem_sjbModelStoreContainer" CdmEntityContainer="vsystem_sjbEntities">
+    <EntitySetMapping Name="tbl_departamento">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_departamento">
+        <MappingFragment StoreEntitySet="tbl_departamento">
+          <ScalarProperty Name="departamentoid" ColumnName="departamentoid" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_estatus">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_estatus">
+        <MappingFragment StoreEntitySet="tbl_estatus">
+          <ScalarProperty Name="estatusid" ColumnName="estatusid" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_jerarquia">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_jerarquia">
+        <MappingFragment StoreEntitySet="tbl_jerarquia">
+          <ScalarProperty Name="jerarquiaid" ColumnName="jerarquiaid" />
+          <ScalarProperty Name="talento_humano" ColumnName="talento_humano" />
+          <ScalarProperty Name="jefe_talentohumano" ColumnName="jefe_talentohumano" />
+          <ScalarProperty Name="departamentoid" ColumnName="departamentoid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_log_vacaciones">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_log_vacaciones">
+        <MappingFragment StoreEntitySet="tbl_log_vacaciones">
+          <ScalarProperty Name="logid" ColumnName="logid" />
+          <ScalarProperty Name="vacacionesid" ColumnName="vacacionesid" />
+          <ScalarProperty Name="th_modifico" ColumnName="th_modifico" />
+          <ScalarProperty Name="estatus_anterior" ColumnName="estatus_anterior" />
+          <ScalarProperty Name="estatus_actual" ColumnName="estatus_actual" />
+          <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_permisos">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_permisos">
+        <MappingFragment StoreEntitySet="tbl_permisos">
+          <ScalarProperty Name="permisosid" ColumnName="permisosid" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_roles">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_roles">
+        <MappingFragment StoreEntitySet="tbl_roles">
+          <ScalarProperty Name="rolesid" ColumnName="rolesid" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_usuarios">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_usuarios">
+        <MappingFragment StoreEntitySet="tbl_usuarios">
+          <ScalarProperty Name="talento_humano" ColumnName="talento_humano" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="primer_nombre" ColumnName="primer_nombre" />
+          <ScalarProperty Name="segundo_nombre" ColumnName="segundo_nombre" />
+          <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+          <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+          <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tbl_roles_permisos" TypeName="vsystem_sjbModel.tbl_roles_permisos" StoreEntitySet="tbl_roles_permisos">
+      <EndProperty Name="tbl_permisos">
+        <ScalarProperty Name="permisosid" ColumnName="permisosid" />
+      </EndProperty>
+      <EndProperty Name="tbl_roles">
+        <ScalarProperty Name="rolesid" ColumnName="rolesid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tbl_usuarios_departamento" TypeName="vsystem_sjbModel.tbl_usuarios_departamento" StoreEntitySet="tbl_usuarios_departamento">
+      <EndProperty Name="tbl_departamento">
+        <ScalarProperty Name="departamentoid" ColumnName="departamentoid" />
+      </EndProperty>
+      <EndProperty Name="tbl_usuarios">
+        <ScalarProperty Name="talento_humano" ColumnName="talento_humano" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tbl_usuarios_roles" TypeName="vsystem_sjbModel.tbl_usuarios_roles" StoreEntitySet="tbl_usuarios_roles">
+      <EndProperty Name="tbl_roles">
+        <ScalarProperty Name="rolesid" ColumnName="rolesid" />
+      </EndProperty>
+      <EndProperty Name="tbl_usuarios">
+        <ScalarProperty Name="talento_humano" ColumnName="talento_humano" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="tbl_vacaciones">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_vacaciones">
+        <MappingFragment StoreEntitySet="tbl_vacaciones">
+          <ScalarProperty Name="estatusid" ColumnName="estatusid" />
+          <ScalarProperty Name="fecha_de_aprobacion" ColumnName="fecha_de_aprobacion" />
+          <ScalarProperty Name="fecha_solicitud" ColumnName="fecha_solicitud" />
+          <ScalarProperty Name="dias_solicitados" ColumnName="dias_solicitados" />
+          <ScalarProperty Name="fecha_entrada" ColumnName="fecha_entrada" />
+          <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="talento_humano" ColumnName="talento_humano" />
+          <ScalarProperty Name="vacacionesid" ColumnName="vacacionesid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_tipo_dia">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_tipo_dia">
+        <MappingFragment StoreEntitySet="tbl_tipo_dia">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipo_dia_id" ColumnName="tipo_dia_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_calendario">
+      <EntityTypeMapping TypeName="vsystem_sjbModel.tbl_calendario">
+        <MappingFragment StoreEntitySet="tbl_calendario">
+          <ScalarProperty Name="tipo_dia_id" ColumnName="tipo_dia_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="talento_humano_empleado" ColumnName="talento_humano_empleado" />
+          <ScalarProperty Name="talento_humano_jefe" ColumnName="talento_humano_jefe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

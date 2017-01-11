@@ -1,0 +1,38 @@
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\GestionVacacionesUnitec.dll.config
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\GestionVacacionesUnitec.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\GestionVacacionesUnitec.pdb
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Helpers.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Razor.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Webpages.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Razor.xml
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Webpages.xml
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Helpers.xml
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\obj\Debug\GestionVacacionesUnitec.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\obj\Debug\GestionVacacionesUnitec.pdb
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Mvc.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Mvc.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\GestionVacacionesUnitec.dll.config
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\GestionVacacionesUnitec.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\GestionVacacionesUnitec.pdb
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Helpers.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Mvc.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Razor.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.WebPages.Deployment.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.WebPages.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.WebPages.Razor.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Helpers.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Mvc.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.Razor.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.WebPages.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.WebPages.Deployment.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\bin\System.Web.WebPages.Razor.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\obj\Debug\GestionVacacionesUnitec.csprojResolveAssemblyReference.cache
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\obj\Debug\GestionVacacionesUnitec.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\obj\Debug\GestionVacacionesUnitec.pdb
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\GestionVacacionesUnitec\obj\Debug\GestionVacacionesUnitec.csprojResolveAssemblyReference.cache

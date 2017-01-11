@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="28a2484a0a01461caace5d17f56e1e96" Name="Diagram1">
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_departamento" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_estatus" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_jerarquia" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_log_vacaciones" Width="1.5" PointX="11.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_permisos" Width="1.5" PointX="1.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_roles" Width="1.5" PointX="3.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_usuarios" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_j_d" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_lv_e_ac" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_lv_e_an" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_j_th" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_j_thj" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_lv_th" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.tbl_roles_permisos" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.tbl_usuarios_departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="vsystem_sjbModel.tbl_usuarios_roles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_vacaciones" Width="1.5" PointX="8.25" PointY="2.5" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_v_e" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_lv_v" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_v_th" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_tipo_dia" Width="1.5" PointX="0.875" PointY="0.875" />
+        <EntityTypeShape EntityType="vsystem_sjbModel.tbl_calendario" Width="1.5" PointX="8.25" PointY="7.375" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_c_td" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_c_th_e" />
+        <AssociationConnector Association="vsystem_sjbModel.fk_c_th_j" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vsystem_sjbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_calendario">
+    <Key>
+      <PropertyRef Name="talento_humano_jefe" />
+      <PropertyRef Name="talento_humano_empleado" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="talento_humano_jefe" Type="int" Nullable="false" />
+    <Property Name="talento_humano_empleado" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="tipo_dia_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_departamento">
+    <Key>
+      <PropertyRef Name="departamentoid" />
+    </Key>
+    <Property Name="departamentoid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_estatus">
+    <Key>
+      <PropertyRef Name="estatusid" />
+    </Key>
+    <Property Name="estatusid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_jerarquia">
+    <Key>
+      <PropertyRef Name="jerarquiaid" />
+      <PropertyRef Name="talento_humano" />
+      <PropertyRef Name="jefe_talentohumano" />
+      <PropertyRef Name="departamentoid" />
+    </Key>
+    <Property Name="jerarquiaid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="talento_humano" Type="int" Nullable="false" />
+    <Property Name="jefe_talentohumano" Type="int" Nullable="false" />
+    <Property Name="departamentoid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_log_vacaciones">
+    <Key>
+      <PropertyRef Name="logid" />
+    </Key>
+    <Property Name="logid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vacacionesid" Type="int" Nullable="false" />
+    <Property Name="th_modifico" Type="int" Nullable="false" />
+    <Property Name="estatus_anterior" Type="int" />
+    <Property Name="estatus_actual" Type="int" Nullable="false" />
+    <Property Name="fecha_modificacion" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_permisos">
+    <Key>
+      <PropertyRef Name="permisosid" />
+    </Key>
+    <Property Name="permisosid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_roles">
+    <Key>
+      <PropertyRef Name="rolesid" />
+    </Key>
+    <Property Name="rolesid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_roles_permisos">
+    <Key>
+      <PropertyRef Name="rolesid" />
+      <PropertyRef Name="permisosid" />
+    </Key>
+    <Property Name="rolesid" Type="int" Nullable="false" />
+    <Property Name="permisosid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_tipo_dia">
+    <Key>
+      <PropertyRef Name="tipo_dia_id" />
+    </Key>
+    <Property Name="tipo_dia_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_usuarios">
+    <Key>
+      <PropertyRef Name="talento_humano" />
+    </Key>
+    <Property Name="talento_humano" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="primer_nombre" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="segundo_nombre" Type="varchar" MaxLength="45" />
+    <Property Name="primer_apellido" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="segundo_apellido" Type="varchar" MaxLength="45" />
+    <Property Name="fecha_ingreso" Type="date" Nullable="false" />
+    <Property Name="fecha_creacion" Type="date" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_usuarios_departamento">
+    <Key>
+      <PropertyRef Name="talento_humano" />
+      <PropertyRef Name="departamentoid" />
+    </Key>
+    <Property Name="talento_humano" Type="int" Nullable="false" />
+    <Property Name="departamentoid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_usuarios_roles">
+    <Key>
+      <PropertyRef Name="talento_humano" />
+      <PropertyRef Name="rolesid" />
+    </Key>
+    <Property Name="talento_humano" Type="int" Nullable="false" />
+    <Property Name="rolesid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_vacaciones">
+    <Key>
+      <PropertyRef Name="vacacionesid" />
+    </Key>
+    <Property Name="vacacionesid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="talento_humano" Type="int" Nullable="false" />
+    <Property Name="year" Type="int" Nullable="false" />
+    <Property Name="fecha_salida" Type="date" Nullable="false" />
+    <Property Name="fecha_entrada" Type="date" Nullable="false" />
+    <Property Name="dias_solicitados" Type="int" Nullable="false" />
+    <Property Name="fecha_solicitud" Type="date" Nullable="false" />
+    <Property Name="fecha_de_aprobacion" Type="date" Nullable="false" />
+    <Property Name="estatusid" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_c_td">
+    <End Role="tbl_tipo_dia" Type="Self.tbl_tipo_dia" Multiplicity="1" />
+    <End Role="tbl_calendario" Type="Self.tbl_calendario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_tipo_dia">
+        <PropertyRef Name="tipo_dia_id" />
+      </Principal>
+      <Dependent Role="tbl_calendario">
+        <PropertyRef Name="tipo_dia_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_c_th_e">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_calendario" Type="Self.tbl_calendario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_calendario">
+        <PropertyRef Name="talento_humano_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_c_th_j">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_calendario" Type="Self.tbl_calendario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_calendario">
+        <PropertyRef Name="talento_humano_jefe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_j_d">
+    <End Role="tbl_departamento" Type="Self.tbl_departamento" Multiplicity="1" />
+    <End Role="tbl_jerarquia" Type="Self.tbl_jerarquia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_departamento">
+        <PropertyRef Name="departamentoid" />
+      </Principal>
+      <Dependent Role="tbl_jerarquia">
+        <PropertyRef Name="departamentoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_j_th">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_jerarquia" Type="Self.tbl_jerarquia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_jerarquia">
+        <PropertyRef Name="talento_humano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_j_thj">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_jerarquia" Type="Self.tbl_jerarquia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_jerarquia">
+        <PropertyRef Name="jefe_talentohumano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lv_e_ac">
+    <End Role="tbl_estatus" Type="Self.tbl_estatus" Multiplicity="1" />
+    <End Role="tbl_log_vacaciones" Type="Self.tbl_log_vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_estatus">
+        <PropertyRef Name="estatusid" />
+      </Principal>
+      <Dependent Role="tbl_log_vacaciones">
+        <PropertyRef Name="estatus_actual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lv_e_an">
+    <End Role="tbl_estatus" Type="Self.tbl_estatus" Multiplicity="0..1" />
+    <End Role="tbl_log_vacaciones" Type="Self.tbl_log_vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_estatus">
+        <PropertyRef Name="estatusid" />
+      </Principal>
+      <Dependent Role="tbl_log_vacaciones">
+        <PropertyRef Name="estatus_anterior" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lv_th">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_log_vacaciones" Type="Self.tbl_log_vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_log_vacaciones">
+        <PropertyRef Name="th_modifico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_lv_v">
+    <End Role="tbl_vacaciones" Type="Self.tbl_vacaciones" Multiplicity="1" />
+    <End Role="tbl_log_vacaciones" Type="Self.tbl_log_vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_vacaciones">
+        <PropertyRef Name="vacacionesid" />
+      </Principal>
+      <Dependent Role="tbl_log_vacaciones">
+        <PropertyRef Name="vacacionesid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rp_p">
+    <End Role="tbl_permisos" Type="Self.tbl_permisos" Multiplicity="1" />
+    <End Role="tbl_roles_permisos" Type="Self.tbl_roles_permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_permisos">
+        <PropertyRef Name="permisosid" />
+      </Principal>
+      <Dependent Role="tbl_roles_permisos">
+        <PropertyRef Name="permisosid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rp_r">
+    <End Role="tbl_roles" Type="Self.tbl_roles" Multiplicity="1" />
+    <End Role="tbl_roles_permisos" Type="Self.tbl_roles_permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_roles">
+        <PropertyRef Name="rolesid" />
+      </Principal>
+      <Dependent Role="tbl_roles_permisos">
+        <PropertyRef Name="rolesid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ud_d">
+    <End Role="tbl_departamento" Type="Self.tbl_departamento" Multiplicity="1" />
+    <End Role="tbl_usuarios_departamento" Type="Self.tbl_usuarios_departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_departamento">
+        <PropertyRef Name="departamentoid" />
+      </Principal>
+      <Dependent Role="tbl_usuarios_departamento">
+        <PropertyRef Name="departamentoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ud_u">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_usuarios_departamento" Type="Self.tbl_usuarios_departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_usuarios_departamento">
+        <PropertyRef Name="talento_humano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ur_r">
+    <End Role="tbl_roles" Type="Self.tbl_roles" Multiplicity="1" />
+    <End Role="tbl_usuarios_roles" Type="Self.tbl_usuarios_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_roles">
+        <PropertyRef Name="rolesid" />
+      </Principal>
+      <Dependent Role="tbl_usuarios_roles">
+        <PropertyRef Name="rolesid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ur_u">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_usuarios_roles" Type="Self.tbl_usuarios_roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_usuarios_roles">
+        <PropertyRef Name="talento_humano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_v_e">
+    <End Role="tbl_estatus" Type="Self.tbl_estatus" Multiplicity="1" />
+    <End Role="tbl_vacaciones" Type="Self.tbl_vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_estatus">
+        <PropertyRef Name="estatusid" />
+      </Principal>
+      <Dependent Role="tbl_vacaciones">
+        <PropertyRef Name="estatusid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_v_th">
+    <End Role="tbl_usuarios" Type="Self.tbl_usuarios" Multiplicity="1" />
+    <End Role="tbl_vacaciones" Type="Self.tbl_vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuarios">
+        <PropertyRef Name="talento_humano" />
+      </Principal>
+      <Dependent Role="tbl_vacaciones">
+        <PropertyRef Name="talento_humano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="vsystem_sjbModelStoreContainer">
+    <EntitySet Name="tbl_calendario" EntityType="Self.tbl_calendario" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_departamento" EntityType="Self.tbl_departamento" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_estatus" EntityType="Self.tbl_estatus" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_jerarquia" EntityType="Self.tbl_jerarquia" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_log_vacaciones" EntityType="Self.tbl_log_vacaciones" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_permisos" EntityType="Self.tbl_permisos" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_roles" EntityType="Self.tbl_roles" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_roles_permisos" EntityType="Self.tbl_roles_permisos" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_tipo_dia" EntityType="Self.tbl_tipo_dia" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_usuarios" EntityType="Self.tbl_usuarios" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_usuarios_departamento" EntityType="Self.tbl_usuarios_departamento" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_usuarios_roles" EntityType="Self.tbl_usuarios_roles" Schema="vsystem_sjb" store:Type="Tables" />
+    <EntitySet Name="tbl_vacaciones" EntityType="Self.tbl_vacaciones" Schema="vsystem_sjb" store:Type="Tables" />
+    <AssociationSet Name="fk_c_td" Association="Self.fk_c_td">
+      <End Role="tbl_tipo_dia" EntitySet="tbl_tipo_dia" />
+      <End Role="tbl_calendario" EntitySet="tbl_calendario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_c_th_e" Association="Self.fk_c_th_e">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_calendario" EntitySet="tbl_calendario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_c_th_j" Association="Self.fk_c_th_j">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_calendario" EntitySet="tbl_calendario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_j_d" Association="Self.fk_j_d">
+      <End Role="tbl_departamento" EntitySet="tbl_departamento" />
+      <End Role="tbl_jerarquia" EntitySet="tbl_jerarquia" />
+    </AssociationSet>
+    <AssociationSet Name="fk_j_th" Association="Self.fk_j_th">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_jerarquia" EntitySet="tbl_jerarquia" />
+    </AssociationSet>
+    <AssociationSet Name="fk_j_thj" Association="Self.fk_j_thj">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_jerarquia" EntitySet="tbl_jerarquia" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lv_e_ac" Association="Self.fk_lv_e_ac">
+      <End Role="tbl_estatus" EntitySet="tbl_estatus" />
+      <End Role="tbl_log_vacaciones" EntitySet="tbl_log_vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lv_e_an" Association="Self.fk_lv_e_an">
+      <End Role="tbl_estatus" EntitySet="tbl_estatus" />
+      <End Role="tbl_log_vacaciones" EntitySet="tbl_log_vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lv_th" Association="Self.fk_lv_th">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_log_vacaciones" EntitySet="tbl_log_vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="fk_lv_v" Association="Self.fk_lv_v">
+      <End Role="tbl_vacaciones" EntitySet="tbl_vacaciones" />
+      <End Role="tbl_log_vacaciones" EntitySet="tbl_log_vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rp_p" Association="Self.fk_rp_p">
+      <End Role="tbl_permisos" EntitySet="tbl_permisos" />
+      <End Role="tbl_roles_permisos" EntitySet="tbl_roles_permisos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rp_r" Association="Self.fk_rp_r">
+      <End Role="tbl_roles" EntitySet="tbl_roles" />
+      <End Role="tbl_roles_permisos" EntitySet="tbl_roles_permisos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ud_d" Association="Self.fk_ud_d">
+      <End Role="tbl_departamento" EntitySet="tbl_departamento" />
+      <End Role="tbl_usuarios_departamento" EntitySet="tbl_usuarios_departamento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ud_u" Association="Self.fk_ud_u">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_usuarios_departamento" EntitySet="tbl_usuarios_departamento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ur_r" Association="Self.fk_ur_r">
+      <End Role="tbl_roles" EntitySet="tbl_roles" />
+      <End Role="tbl_usuarios_roles" EntitySet="tbl_usuarios_roles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ur_u" Association="Self.fk_ur_u">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_usuarios_roles" EntitySet="tbl_usuarios_roles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_v_e" Association="Self.fk_v_e">
+      <End Role="tbl_estatus" EntitySet="tbl_estatus" />
+      <End Role="tbl_vacaciones" EntitySet="tbl_vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="fk_v_th" Association="Self.fk_v_th">
+      <End Role="tbl_usuarios" EntitySet="tbl_usuarios" />
+      <End Role="tbl_vacaciones" EntitySet="tbl_vacaciones" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

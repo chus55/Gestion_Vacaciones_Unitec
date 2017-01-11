@@ -1,0 +1,16 @@
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\WcfServiceLibrary_sjb.dll.config
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\WcfServiceLibrary_sjb.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\WcfServiceLibrary_sjb.pdb
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\EntityFramework.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\EntityFramework.xml
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\obj\Debug\WcfServiceLibrary_sjb.dll
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\obj\Debug\WcfServiceLibrary_sjb.pdb
+C:\Users\Jesus\Dropbox\Clases Unitec\Programacion 4\Projects\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\obj\Debug\WcfServiceLibrary_sjb.csprojResolveAssemblyReference.cache
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\WcfServiceLibrary_sjb.dll.config
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\WcfServiceLibrary_sjb.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\WcfServiceLibrary_sjb.pdb
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\EntityFramework.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\bin\Debug\EntityFramework.xml
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\obj\Debug\WcfServiceLibrary_sjb.csprojResolveAssemblyReference.cache
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\obj\Debug\WcfServiceLibrary_sjb.dll
+C:\Users\napky\Documents\GitHub\ProgramacionIV\GestionVacacionesUnitec\WcfServiceLibrary_sjb\obj\Debug\WcfServiceLibrary_sjb.pdb

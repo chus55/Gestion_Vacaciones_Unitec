@@ -1,0 +1,104 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gestion de Vacaciones UNITEC</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/stylesmenu.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+
+    <script src="script.js"></script>
+
+    <script type="text/javascript" src="~/Content/js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <div id="logo">
+                <div id="logo_text">
+
+                    <img src="~/Content/images/logounitecpeque.jpg">
+                </div>
+
+            </div>
+            <nav>
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href='http://localhost:1755/Home/Index'><span>Inicio</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    </div>
+    <div id="site_content">
+        <div id="site_creacion">
+            <h2 style="text-align : center">Crear Usuario</h2>
+            <hr />
+            <form id="gatito">
+                <h4>Talento humano : <input placeholder='talento_humano' type='talento_humano' id="talentoHumano"></h4>
+                <h4>Email : <input placeholder='email' type='email' id="email"></h4>
+                <h4>Password : <input placeholder='password' type='password' id="password"></h4>
+                <h4>Primer nombre : <input placeholder='primer_nombre' type='primer_nombre' id="firstName"></h4>
+                <h4>Segundo nombre : <input placeholder='segundo_nombre' type='segundo_nombre' id="middleName"></h4>
+                <h4>Primer apellido  : <input placeholder='primer_apellido' type='primer_apellido' id="lastName"></h4>
+                <h4>Segundo apellido : <input placeholder='segundo_apellido' type='segundo_apellido' id="secondLastName"></h4>
+                <h4>Fecha de ingreso : <input placeholder='fecha_ingreso' type='fecha_ingreso' id="employmentDate"></h4>
+                
+                <hr />
+                <h2 style ="text-align : center">Departamento</h2style>
+                    
+                    <ul id="departmentList" >
+
+                    </ul>
+                <hr />
+                <h2 style ="text-align : center">Rol</h2style>
+                <hr />
+                    <ul id="roleList">
+
+                    </ul>   
+                <hr />
+                   <h2 style ="text-align : center">Jefe</h2style>
+                <hr />
+
+                    <ul id="bossList">
+
+                    </ul> 
+                        ______________________________________________________________________________________________________________________________________<br />    
+                       <center><button class='animated-pulse' id="submitUser" style="width: 100%">Crear</button></center>
+</form>
+        </div>
+    </div>
+    <div id="MyFooter">
+        <center><img src="~/Content/images/bg_footerlogos.png" /></center>
+
+    </div>
+    <p>&nbsp;</p>
+    <!-- javascript en la parte de abajo para que cargue mas rapido -->
+    <script type="text/javascript" src="~/Content/js/jquery.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.easing-sooper.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.sooperfish.js"></script>
+    <script type="text/javascript" src="~/Content/js/image_fade.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="~/Scripts/CreateUserForm.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+    </script>
+</body>
+</html>
